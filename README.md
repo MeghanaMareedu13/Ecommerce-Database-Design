@@ -58,23 +58,27 @@ erDiagram
 
 ## 🚀 Key Features
 - **Normalization**: Structured into 5 optimized tables (Users, Products, Categories, Orders, OrderItems).
-- **Indexing Strategy**: B-tree indexes on foreign keys and frequently searched columns to ensure high performance at scale.
-- **Relational Integrity**: Strict Foreign Key constraints to prevent orphaned records.
-- **Analytic Ready**: Schema designed to support common business queries (Total Sales, Stock Alerts, Customer Behavior).
+- **Indexing Strategy**: B-tree indexes on foreign keys to optimize Join performance.
+- **Live Transaction Simulator**: A built-in engine that simulates real-time e-commerce orders.
+- **Real-Time Analytics Dashboard**: A Streamlit interface that tracks revenue, order distribution, and stock levels as transactions occur.
 
 ## 🛠️ Tech Stack
-- **Database Engine**: PostgreSQL (SQLite used for local demonstration)
-- **Modeling**: ER Diagrams (Mermaid.js)
-- **Language**: SQL (DDL, DML)
-- **Scripting**: Python (Pandas) for query execution and initialization
+- **Database Engine**: SQLite (SQL)
+- **Dashboard**: Streamlit
+- **Visualization**: Plotly
+- **Scripting**: Python (Asyncio, Pandas)
 
 ## 🏃 How to Run
-1. Ensure you have Python installed.
-2. Run the initialization script:
-```bash
-python main.py
-```
-This will create `ecommerce.db`, seed it with data, and run sample analytic queries.
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Launch the live dashboard:
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+3. Click **"Start Live Data Stream"** in the sidebar to begin the simulation.
+
 
 ---
 *Developed as part of the 30-Day Recruiter Attraction Challenge.*
